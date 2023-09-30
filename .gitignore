@@ -1,0 +1,6 @@
+/coverage
+/node_modules
+*.js
+*.map
+*.d.ts
+tsconfig.tsbuildinfo
