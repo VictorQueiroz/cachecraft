@@ -23,6 +23,7 @@
     "build:es": "npx tsc --project src/tsconfig.json --sourceRoot .. --importHelpers true --moduleResolution bundler --module ESNext --outDir es",
     "build:set-es-paths": "npx pkg-utilities --set-es-paths --es-folder es --include \"src/**/*.js\" --exclude es --exclude node_modules"
   },
+  "license": "MIT",
   "main": "./src/index.js",
   "name": "cachecraft",
   "version": "1.0.0",
