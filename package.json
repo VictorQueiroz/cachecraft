@@ -28,7 +28,7 @@
   "name": "cachecraft",
   "version": "1.0.1",
   "files": [
-    "src/**/*.{map,d.ts,ts,js}",
+    "src/**/*.{map,d.ts,js}",
     "es/**/*.{map,d.ts,js}"
   ],
   "browser": {
