@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/chai": "^4.3.6",
+    "@types/node": "^20.14.8",
     "@types/sinon": "^10.0.17",
     "ava": "^5.3.1",
     "c8": "^8.0.1",
@@ -11,24 +12,24 @@
     "prettier": "^3.0.3",
     "sinon": "^16.0.0",
     "ts-node": "^10.9.1",
-    "tsx": "^3.13.0",
-    "typescript": "^5.2.2"
+    "tsx": "^3.14.0",
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "coverage": "npx c8 npm test",
-    "test": "npx ava test",
+    "test": "npx ava dist/test/index.js",
     "prepublishOnly": "npm run build:all && npm run coverage",
     "build:all": "npm run build && npm run build:es && npm run build:set-es-paths",
-    "build": "npx tsc -b src --force",
+    "build": "npx tsc -b src test --force",
     "build:es": "npx tsc --project src/tsconfig.json --sourceRoot .. --importHelpers true --moduleResolution bundler --module ESNext --outDir es",
-    "build:set-es-paths": "npx pkg-utilities --set-es-paths --es-folder es --include \"src/**/*.js\" --exclude es --exclude node_modules"
+    "build:set-es-paths": "npx pkg-utilities --set-es-paths --es-folder es --include \"dist/src/**/*.js\" --exclude es --exclude node_modules"
   },
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "./dist/src/index.js",
   "name": "cachecraft",
   "version": "1.0.2",
   "files": [
-    "src/**/*.{map,d.ts,js}",
+    "dist/src/**/*.{map,d.ts,js}",
     "es/**/*.{map,d.ts,js}"
   ],
   "browser": {

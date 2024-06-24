@@ -1,11 +1,11 @@
 import test from "ava";
+import sinon from "sinon";
 import {
   LastKnownMemorizer,
   Memorizer,
   MemorizerList,
   WeakMemorizer,
-} from "../src/index.ts";
-import sinon from "sinon";
+} from "../src";
 
 test("LastKnownMemorizer: it should only keep the last computed value", (t) => {
   const memo = new LastKnownMemorizer((value: number) => ({

@@ -1,11 +1,11 @@
 {
   "extends": "../tsconfig.base.json",
+  "references": [{ "path": "../src" }],
   "compilerOptions": {
-    "module": "NodeNext",
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "moduleResolution": "NodeNext"
-  },
-  "include": ["index.ts"],
-  "references": [{ "path:": "../src" }]
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ESNext"],
+    "types": ["node"]
+  }
 }
