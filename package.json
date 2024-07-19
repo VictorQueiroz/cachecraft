@@ -27,7 +27,7 @@
   "license": "MIT",
   "main": "./dist/src/index.js",
   "name": "cachecraft",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "files": [
     "dist/src/**/*.{map,d.ts,js}",
     "es/**/*.{map,d.ts,js}"
