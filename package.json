@@ -20,7 +20,7 @@
     "prepublishOnly": "npm run build:all && npm run coverage",
     "build:all": "npm run build && npm run build:es && npm run build:set-es-paths",
     "build": "npx tsc -b src test --force",
-    "build:es": "npx tsc --project src/tsconfig.json --sourceRoot .. --importHelpers true --module ESNext --outDir es",
+    "build:es": "npx tsc --project src/tsconfig.json --sourceRoot .. --module ESNext --outDir es",
     "build:set-es-paths": "npx pkg-utilities --write --root-dir dist --set-es-paths --es-folder es --include \"dist/src/**/*.js\" --exclude es --exclude node_modules"
   },
   "license": "MIT",
